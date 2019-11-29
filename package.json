@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node src/index.js",
+    "postinstall": "prisma2 generate",
+    "start": "npm run postinstall && node src/index.js",
     "seed": "node prisma/seed.js"
   },
   "keywords": [],
